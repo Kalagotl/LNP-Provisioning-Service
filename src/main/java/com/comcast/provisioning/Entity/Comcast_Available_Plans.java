@@ -50,7 +50,7 @@ public class Comcast_Available_Plans {
     private boolean yearlyIsActive;
     @ManyToOne
     @JoinColumn(name = "customer_id") // Assuming this is the foreign key column name in the database
-    private comcast_customer_Details customerDetails;
+    private Comcast_Customer_Details customerDetails;
 	public Long getId() {
 		return id;
 	}

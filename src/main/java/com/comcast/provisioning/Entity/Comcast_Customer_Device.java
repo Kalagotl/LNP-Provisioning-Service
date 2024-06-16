@@ -24,7 +24,7 @@ public class Comcast_Customer_Device {
     private String status;
 
     @OneToOne(mappedBy = "customerDevice")
-    private comcast_customer_Details customerDetails;
+    private Comcast_Customer_Details customerDetails;
     // Getters and Setters
 
     public Long getId() {

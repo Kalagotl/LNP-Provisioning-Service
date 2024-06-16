@@ -10,7 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
-public class comcast_customer_Details {
+public class Comcast_Customer_Details {
 	@Id // Indicates the primary key of the entity
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // Specifies the generation strategy for the primary key
 	private Long customerId; // Primary key
@@ -23,8 +23,14 @@ public class comcast_customer_Details {
 	private String passport;
 	private Date customerActiveDate;
 	private Date customerDeactiveDate;
-
-    @ManyToOne
+	private String plan;
+    public String getPlan() {
+		return plan;
+	}
+	public void setPlan(String plan) {
+		this.plan = plan;
+	}
+	@ManyToOne
     @JoinColumn(name = "corporation_id") // Assuming this is the foreign key column name in the database
     private Comcast_Corporation_Details comcastCorporationDetails;
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -125,6 +131,10 @@ public class comcast_customer_Details {
 	}
 	public void setAvailablePlans(List<Comcast_Available_Plans> availablePlans) {
 		this.availablePlans = availablePlans;
+	}
+	public void setSpid(Long spid) {
+		// TODO Auto-generated method stub
+		
 	}
     
 

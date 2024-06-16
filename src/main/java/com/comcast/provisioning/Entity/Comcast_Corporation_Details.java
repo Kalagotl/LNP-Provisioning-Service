@@ -1,4 +1,3 @@
-
 package com.comcast.provisioning.Entity;
 import java.util.List;
 import jakarta.persistence.Entity;
@@ -27,7 +26,7 @@ public class Comcast_Corporation_Details {
  // Getters and Setters 
 
     @OneToMany(mappedBy = "comcastCorporationDetails")
-    private List<comcast_customer_Details> customers;
+    private List<Comcast_Customer_Details> customers;
     
 	public Long getId() {
 		return id;

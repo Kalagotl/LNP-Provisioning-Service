@@ -23,7 +23,7 @@ public class Comcast_Customer_Address {
     private String country;
     @ManyToOne
     @JoinColumn(name = "customer_id") // Assuming this is the foreign key column name in the database
-    private comcast_customer_Details customer;
+    private Comcast_Customer_Details customer;
 
     public Comcast_Customer_Address() {
     }

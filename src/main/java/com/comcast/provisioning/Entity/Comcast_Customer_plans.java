@@ -23,7 +23,7 @@ public class Comcast_Customer_plans {
     // Constructors, getters, and setters
     @OneToOne
     @JoinColumn(name = "customer_details_id") // Assuming this is the foreign key column name in the database
-    private comcast_customer_Details customerDetails;
+    private Comcast_Customer_Details customerDetails;
     
 
     

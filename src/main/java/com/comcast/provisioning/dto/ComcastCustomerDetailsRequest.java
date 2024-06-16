@@ -1,6 +1,7 @@
 package com.comcast.provisioning.dto;
 
 import java.util.Date;
+import java.util.List;
 
 public class ComcastCustomerDetailsRequest {
 	
@@ -14,6 +15,18 @@ public class ComcastCustomerDetailsRequest {
 	private Date customerDeactiveDate;
 	private Long Spid;
 	private String TransactionId;
+	private String Plan;
+	public void setPlan(String plan) {
+		Plan = plan;
+	}
+	private List<ComcastCustomerAddressRequest> comcastCustomerAddressRequest;
+	
+	public List<ComcastCustomerAddressRequest> getComcastCustomerAddressRequest() {
+		return comcastCustomerAddressRequest;
+	}
+	public void setComcastCustomerAddressRequest(List<ComcastCustomerAddressRequest> comcastCustomerAddressRequest) {
+		this.comcastCustomerAddressRequest = comcastCustomerAddressRequest;
+	}
 	public String getCustomerName() {
 		return customerName;
 	}
@@ -73,6 +86,10 @@ public class ComcastCustomerDetailsRequest {
 	}
 	public void setTransactionId(String transactionId) {
 		TransactionId = transactionId;
+	}
+	public String getPlan() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
