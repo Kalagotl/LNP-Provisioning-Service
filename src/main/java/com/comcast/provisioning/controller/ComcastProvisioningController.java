@@ -6,14 +6,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.comcast.provisioning.dto.ComcastCustomerDetailsRequest;
+
+
 @RestController
 @RequestMapping("/comcast")
 public class ComcastProvisioningController {
 	
 	@PostMapping("/provisioning")
-    public  String Provisioning(@RequestBody LNP_Service_Details request) {
-        // Call service layer method to initiate provisioning
-       
-        return null;
-    }
+	public  ResponseEntity<String> Provisioning(@RequestBody ComcastCustomerDetailsRequest comcastRequest) {
+		
+		
+		
+		
+		 return ResponseEntity.ok("Provisioning initiated successfully");
+	}
 }

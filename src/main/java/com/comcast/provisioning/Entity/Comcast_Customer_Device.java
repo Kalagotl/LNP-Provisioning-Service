@@ -1,9 +1,9 @@
 package com.comcast.provisioning.Entity;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
 
@@ -23,6 +23,8 @@ public class Comcast_Customer_Device {
     private LocalDate activationDate;
     private String status;
 
+    @OneToOne(mappedBy = "customerDevice")
+    private comcast_customer_Details customerDetails;
     // Getters and Setters
 
     public Long getId() {
