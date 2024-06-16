@@ -14,7 +14,7 @@ import com.comcast.provisioning.Entity.Comcast_Customer_Details;
 import com.comcast.provisioning.dto.ComcastCustomerDetailsRequest;
 import com.comcast.provisioning.dto.ComcastCustomerDetailsResponse;
 import com.comcast.provisioning.mapper.ComcastCustomerDetailsMapper;
-import com.verizon.entity.CustomerDetails;
+
 
 
 @RestController
