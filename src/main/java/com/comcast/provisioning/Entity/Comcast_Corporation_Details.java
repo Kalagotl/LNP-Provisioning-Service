@@ -23,11 +23,6 @@ public class Comcast_Corporation_Details {
     private int foundedYear;
     private int employeeCount;
     private int comcastSpid;
- // Getters and Setters 
-
-    @OneToMany(mappedBy = "comcastCorporationDetails")
-    private List<Comcast_Customer_Details> customers;
-    
 	public Long getId() {
 		return id;
 	}
@@ -88,6 +83,5 @@ public class Comcast_Corporation_Details {
 	public void setComcastSpid(int comcastSpid) {
 		this.comcastSpid = comcastSpid;
 	}
-
-    
+ 
 }

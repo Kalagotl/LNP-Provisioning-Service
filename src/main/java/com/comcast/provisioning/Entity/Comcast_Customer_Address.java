@@ -1,10 +1,6 @@
 package com.comcast.provisioning.Entity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+
+import jakarta.persistence.*;
 
 @Entity
 public class Comcast_Customer_Address {
@@ -21,91 +17,99 @@ public class Comcast_Customer_Address {
     private String district;
     private String state;
     private String country;
+
     @ManyToOne
-    @JoinColumn(name = "customer_id") // Assuming this is the foreign key column name in the database
-    private Comcast_Customer_Details customer;
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
+    private Comcast_Customer_Details customerDetails;
 
-    public Comcast_Customer_Address() {
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public String getDoorNumber() {
+		return doorNumber;
+	}
 
-    public String getDoorNumber() {
-        return doorNumber;
-    }
+	public void setDoorNumber(String doorNumber) {
+		this.doorNumber = doorNumber;
+	}
 
-    public void setDoorNumber(String doorNumber) {
-        this.doorNumber = doorNumber;
-    }
+	public String getStreet() {
+		return street;
+	}
 
-    public String getStreet() {
-        return street;
-    }
+	public void setStreet(String street) {
+		this.street = street;
+	}
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
+	public String getLandmarks() {
+		return landmarks;
+	}
 
-    public String getLandmarks() {
-        return landmarks;
-    }
+	public void setLandmarks(String landmarks) {
+		this.landmarks = landmarks;
+	}
 
-    public void setLandmarks(String landmarks) {
-        this.landmarks = landmarks;
-    }
+	public String getVillage() {
+		return village;
+	}
 
-    public String getVillage() {
-        return village;
-    }
+	public void setVillage(String village) {
+		this.village = village;
+	}
 
-    public void setVillage(String village) {
-        this.village = village;
-    }
+	public String getMandal() {
+		return mandal;
+	}
 
-    public String getMandal() {
-        return mandal;
-    }
+	public void setMandal(String mandal) {
+		this.mandal = mandal;
+	}
 
-    public void setMandal(String mandal) {
-        this.mandal = mandal;
-    }
+	public String getCity() {
+		return city;
+	}
 
-    public String getCity() {
-        return city;
-    }
+	public void setCity(String city) {
+		this.city = city;
+	}
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+	public String getDistrict() {
+		return district;
+	}
 
-    public String getDistrict() {
-        return district;
-    }
+	public void setDistrict(String district) {
+		this.district = district;
+	}
 
-    public void setDistrict(String district) {
-        this.district = district;
-    }
+	public String getState() {
+		return state;
+	}
 
-    public String getState() {
-        return state;
-    }
+	public void setState(String state) {
+		this.state = state;
+	}
 
-    public void setState(String state) {
-        this.state = state;
-    }
+	public String getCountry() {
+		return country;
+	}
 
-    public String getCountry() {
-        return country;
-    }
+	public void setCountry(String country) {
+		this.country = country;
+	}
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
+	public Comcast_Customer_Details getCustomerDetails() {
+		return customerDetails;
+	}
 
+	public void setCustomerDetails(Comcast_Customer_Details customerDetails) {
+		this.customerDetails = customerDetails;
+	}
+
+    
+    
 }

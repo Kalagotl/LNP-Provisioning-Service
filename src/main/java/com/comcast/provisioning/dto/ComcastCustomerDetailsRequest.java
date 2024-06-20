@@ -3,28 +3,19 @@ import java.util.Date;
 import java.util.List;
 
 public class ComcastCustomerDetailsRequest {
-
 	private String customerName; // Customer details
 	private String email;
 	private String phoneNumber;
-	private Date dateOfBirth;
+	private Date  dateOfBirth;
 	private String gender;
 	private String passport;
 	private String customerId;
-	public String getCustomerId() {
-		return customerId;
-	}
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
-	}
 	private Date customerActiveDate;
-	private Date customerDeactiveDate;
 	private Long Spid;
 	private String TransactionId;
-	private String Plan;
-	public void setPlan(String plan) {
-		Plan = plan;
-	}
+	private String Status;
+	private String planName;
+	private String iccid;
 	private List<ComcastCustomerAddressRequest> comcastCustomerAddressRequest;
 
 	public List<ComcastCustomerAddressRequest> getComcastCustomerAddressRequest() {
@@ -75,12 +66,6 @@ public class ComcastCustomerDetailsRequest {
 	public void setCustomerActiveDate(Date customerActiveDate) {
 		this.customerActiveDate = customerActiveDate;
 	}
-	public Date getCustomerDeactiveDate() {
-		return customerDeactiveDate;
-	}
-	public void setCustomerDeactiveDate(Date customerDeactiveDate) {
-		this.customerDeactiveDate = customerDeactiveDate;
-	}
 	public Long getSpid() {
 		return Spid;
 	}
@@ -93,9 +78,29 @@ public class ComcastCustomerDetailsRequest {
 	public void setTransactionId(String transactionId) {
 		TransactionId = transactionId;
 	}
-	public String getPlan() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+	public String getPlanName() {
+		return planName;
+	}
+	public void setPlanName(String planName) {
+		this.planName = planName;
+	}
+	public String getIccid() {
+		return iccid;
+	}
+	public void setIccid(String iccid) {
+		this.iccid = iccid;
+	}
+	public String getStatus() {
+		return Status;
+	}
+	public void setStatus(String status) {
+		Status = status;
 	}
 
 }
