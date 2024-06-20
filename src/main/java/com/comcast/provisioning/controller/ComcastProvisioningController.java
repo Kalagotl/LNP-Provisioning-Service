@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.comcast.provisioning.Entity.Comcast_Customer_Details;
+import com.comcast.provisioning.Service.ComcastProvisioningServiceImpl;
 import com.comcast.provisioning.dto.ComcastCustomerDetailsRequest;
 import com.comcast.provisioning.dto.ComcastCustomerDetailsResponse;
 import com.comcast.provisioning.mapper.ComcastCustomerDetailsMapper;
@@ -20,7 +21,8 @@ import com.comcast.provisioning.mapper.ComcastCustomerDetailsMapper;
 @RestController
 @RequestMapping("/comcast")
 public class ComcastProvisioningController {
-	
+	@Autowired
+	private ComcastProvisioningServiceImpl  comcastProvisioningServiceImpl;
   @Autowired
   private ComcastCustomerDetailsMapper comcastCustomerDetailsMapper;
 	@PostMapping("/provisioning")
@@ -37,6 +39,9 @@ public class ComcastProvisioningController {
 			{
 				Messages.add("Transaction Id must  not be null");
 			}
+			if (comcastCustomerDetailsRequest.getCustomerId() == null) {
+				Messages.add("CustomerId Id must  not be null");
+	        }
 			if (Messages.isEmpty())
 			{
 
@@ -44,6 +49,7 @@ public class ComcastProvisioningController {
 				Comcast_Customer_Details comcast_Customer_Details =comcastCustomerDetailsMapper.mapCustomerDetails(comcastCustomerDetailsRequest);//Map the request to entity
 
 				// Save the customer details using the service
+				comcastProvisioningServiceImpl.saveCustomerDetails(comcast_Customer_Details);
 
 			}
 

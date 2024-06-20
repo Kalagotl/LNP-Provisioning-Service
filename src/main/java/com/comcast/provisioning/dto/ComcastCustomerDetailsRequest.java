@@ -1,16 +1,22 @@
 package com.comcast.provisioning.dto;
-
 import java.util.Date;
 import java.util.List;
 
 public class ComcastCustomerDetailsRequest {
-	
+
 	private String customerName; // Customer details
 	private String email;
 	private String phoneNumber;
 	private Date dateOfBirth;
 	private String gender;
 	private String passport;
+	private String customerId;
+	public String getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
 	private Date customerActiveDate;
 	private Date customerDeactiveDate;
 	private Long Spid;
@@ -20,7 +26,7 @@ public class ComcastCustomerDetailsRequest {
 		Plan = plan;
 	}
 	private List<ComcastCustomerAddressRequest> comcastCustomerAddressRequest;
-	
+
 	public List<ComcastCustomerAddressRequest> getComcastCustomerAddressRequest() {
 		return comcastCustomerAddressRequest;
 	}
@@ -91,5 +97,5 @@ public class ComcastCustomerDetailsRequest {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 }

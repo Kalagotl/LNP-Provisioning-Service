@@ -13,7 +13,8 @@ import jakarta.persistence.OneToOne;
 public class Comcast_Customer_Details {
 	@Id // Indicates the primary key of the entity
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // Specifies the generation strategy for the primary key
-	private Long customerId; // Primary key
+	private Long Id; // Primary key
+	private Long customerId; 
 	private String customerName; // Customer details
 	private String email;
 	private String phoneNumber;
