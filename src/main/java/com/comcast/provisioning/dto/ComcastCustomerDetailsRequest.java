@@ -12,6 +12,8 @@ public class ComcastCustomerDetailsRequest {
     private String gender;
     private String passport;
     private Date customerActiveDate;
+    private String Spid;
+    private String CustomerId;
     private String status;
     private String planName;
     private String iccid;
@@ -87,6 +89,18 @@ public class ComcastCustomerDetailsRequest {
 	}
 	public void setCustomerAddresses(List<ComcastCustomerAddressRequest> customerAddresses) {
 		this.customerAddresses = customerAddresses;
+	}
+	public String getSpid() {
+		return Spid;
+	}
+	public void setSpid(String spid) {
+		Spid = spid;
+	}
+	public String getCustomerId() {
+		return CustomerId;
+	}
+	public void setCustomerId(String customerId) {
+		CustomerId = customerId;
 	}
 
     // Getters and Setters
