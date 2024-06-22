@@ -16,18 +16,18 @@ import jakarta.transaction.Transactional;
 public class ComcastProvisioningServiceImpl implements ComcastProvisioningService {
 
 	@Autowired
-    private ComcastCustomerDetailsRepository comcastCustomerDetailsRepository;
+	private ComcastCustomerDetailsRepository comcastCustomerDetailsRepository;
 
 	@Autowired
-    private ComcastCustomerDeviceRepository comcastCustomerDeviceRepository;
+	private ComcastCustomerDeviceRepository comcastCustomerDeviceRepository;
 
-    @Override
-    public void saveCustomerDetails(Comcast_Customer_Details customerDetails) {
-        comcastCustomerDetailsRepository.save(customerDetails);
-        
+	@Override
+	public void saveCustomerDetails(Comcast_Customer_Details customerDetails) {
+		comcastCustomerDetailsRepository.save(customerDetails);
+
 	}
- 
 
-    
-    
+
+
+
 }

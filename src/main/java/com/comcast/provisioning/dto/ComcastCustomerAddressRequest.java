@@ -1,22 +1,17 @@
 package com.comcast.provisioning.dto;
+
 public class ComcastCustomerAddressRequest {
-	private Long addressId;
-	private String doorNumber;
-	private String street;
-	private String landmarks;
-	private String village;
-	private String mandal;
-	private String city;
-	private String district;
-	private String state;
-	private String country;
-	
-	public Long getAddressId() {
-		return addressId;
-	}
-	public void setAddressId(Long addressId) {
-		this.addressId = addressId;
-	}
+    private String doorNumber;
+    private String street;
+    private String landmarks;
+    private String village;
+    private String mandal;
+    private String city;
+    private String district;
+    private String state;
+    private String country;
+ // Getters and Setters
+    
 	public String getDoorNumber() {
 		return doorNumber;
 	}
@@ -71,4 +66,9 @@ public class ComcastCustomerAddressRequest {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
+    
+    
 }
+
+

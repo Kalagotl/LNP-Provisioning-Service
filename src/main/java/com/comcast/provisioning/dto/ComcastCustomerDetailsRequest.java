@@ -1,29 +1,21 @@
 package com.comcast.provisioning.dto;
+
 import java.util.Date;
 import java.util.List;
 
 public class ComcastCustomerDetailsRequest {
-	private String customerName; // Customer details
-	private String email;
-	private String phoneNumber;
-	private Date  dateOfBirth;
-	private String gender;
-	private String passport;
-	private String customerId;
-	private Date customerActiveDate;
-	private Long Spid;
-	private String TransactionId;
-	private String Status;
-	private String planName;
-	private String iccid;
-	private List<ComcastCustomerAddressRequest> comcastCustomerAddressRequest;
-
-	public List<ComcastCustomerAddressRequest> getComcastCustomerAddressRequest() {
-		return comcastCustomerAddressRequest;
-	}
-	public void setComcastCustomerAddressRequest(List<ComcastCustomerAddressRequest> comcastCustomerAddressRequest) {
-		this.comcastCustomerAddressRequest = comcastCustomerAddressRequest;
-	}
+    private String customerName;
+    private String email;
+    private String phoneNumber;
+    private Long transactionId;
+    private Date dateOfBirth;
+    private String gender;
+    private String passport;
+    private Date customerActiveDate;
+    private String status;
+    private String planName;
+    private String iccid;
+    private List<ComcastCustomerAddressRequest> customerAddresses;
 	public String getCustomerName() {
 		return customerName;
 	}
@@ -41,6 +33,12 @@ public class ComcastCustomerDetailsRequest {
 	}
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+	public Long getTransactionId() {
+		return transactionId;
+	}
+	public void setTransactionId(Long transactionId) {
+		this.transactionId = transactionId;
 	}
 	public Date getDateOfBirth() {
 		return dateOfBirth;
@@ -66,23 +64,11 @@ public class ComcastCustomerDetailsRequest {
 	public void setCustomerActiveDate(Date customerActiveDate) {
 		this.customerActiveDate = customerActiveDate;
 	}
-	public Long getSpid() {
-		return Spid;
+	public String getStatus() {
+		return status;
 	}
-	public void setSpid(Long spid) {
-		Spid = spid;
-	}
-	public String getTransactionId() {
-		return TransactionId;
-	}
-	public void setTransactionId(String transactionId) {
-		TransactionId = transactionId;
-	}
-	public String getCustomerId() {
-		return customerId;
-	}
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	public String getPlanName() {
 		return planName;
@@ -96,11 +82,14 @@ public class ComcastCustomerDetailsRequest {
 	public void setIccid(String iccid) {
 		this.iccid = iccid;
 	}
-	public String getStatus() {
-		return Status;
+	public List<ComcastCustomerAddressRequest> getCustomerAddresses() {
+		return customerAddresses;
 	}
-	public void setStatus(String status) {
-		Status = status;
+	public void setCustomerAddresses(List<ComcastCustomerAddressRequest> customerAddresses) {
+		this.customerAddresses = customerAddresses;
 	}
 
+    // Getters and Setters
+    // ...
+    
 }

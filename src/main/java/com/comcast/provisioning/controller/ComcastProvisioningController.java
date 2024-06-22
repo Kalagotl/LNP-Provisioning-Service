@@ -23,8 +23,8 @@ import com.comcast.provisioning.mapper.ComcastCustomerDetailsMapper;
 public class ComcastProvisioningController {
 	@Autowired
 	private ComcastProvisioningServiceImpl  comcastProvisioningServiceImpl;
-  @Autowired
-  private ComcastCustomerDetailsMapper comcastCustomerDetailsMapper;
+	@Autowired
+	private ComcastCustomerDetailsMapper comcastCustomerDetailsMapper;
 	@PostMapping("/provisioning")
 	public  ComcastCustomerDetailsResponse Provisioning(@RequestBody ComcastCustomerDetailsRequest comcastCustomerDetailsRequest) {
 		ComcastCustomerDetailsResponse comcastCustomerDetailsResponse = new ComcastCustomerDetailsResponse();
@@ -41,7 +41,7 @@ public class ComcastProvisioningController {
 			}
 			if (comcastCustomerDetailsRequest.getCustomerId() == null) {
 				Messages.add("CustomerId Id must  not be null");
-	        }
+			}
 			if (Messages.isEmpty())
 			{
 
@@ -63,6 +63,6 @@ public class ComcastProvisioningController {
 		}
 
 		return comcastCustomerDetailsResponse;// Return the response object
-		
+
 	}
 }
