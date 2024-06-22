@@ -16,7 +16,14 @@ public class Comcast_Available_Plans {
     private String Description;
 	private double price;
     private String validity;
-    private boolean isActive;
+    private int isActive;
+    private String status;
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -47,12 +54,13 @@ public class Comcast_Available_Plans {
 	public void setValidity(String validity) {
 		this.validity = validity;
 	}
-	public boolean isActive() {
+	public int getIsActive() {
 		return isActive;
 	}
-	public void setActive(boolean isActive) {
+	public void setIsActive(int isActive) {
 		this.isActive = isActive;
 	}
+	
     
 }
 

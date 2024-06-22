@@ -15,7 +15,7 @@ public class ComcastCustomerDetailsRequest {
     private String Spid;
     private String CustomerId;
     private String status;
-    private String planName;
+    private String PlanName;
     private String iccid;
     private List<ComcastCustomerAddressRequest> customerAddresses;
 	public String getCustomerName() {
@@ -72,12 +72,7 @@ public class ComcastCustomerDetailsRequest {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getPlanName() {
-		return planName;
-	}
-	public void setPlanName(String planName) {
-		this.planName = planName;
-	}
+	
 	public String getIccid() {
 		return iccid;
 	}
@@ -101,6 +96,12 @@ public class ComcastCustomerDetailsRequest {
 	}
 	public void setCustomerId(String customerId) {
 		CustomerId = customerId;
+	}
+	public String getPlanName() {
+		return PlanName;
+	}
+	public void setPlanName(String planName) {
+		PlanName = planName;
 	}
 
     // Getters and Setters

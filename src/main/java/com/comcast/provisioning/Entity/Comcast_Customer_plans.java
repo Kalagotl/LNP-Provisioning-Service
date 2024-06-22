@@ -12,9 +12,26 @@ public class Comcast_Customer_plans {
     private String description;
     private double price;
     private String validity;
-    private boolean isActive;
+    private int isActive;
+    private String status;
 
-    @OneToOne
+    public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public int getIsActive() {
+		return isActive;
+	}
+
+	public void setIsActive(int isActive) {
+		this.isActive = isActive;
+	}
+
+	@OneToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Comcast_Customer_Details customerDetails;
 
@@ -58,13 +75,7 @@ public class Comcast_Customer_plans {
 		this.validity = validity;
 	}
 
-	public boolean isActive() {
-		return isActive;
-	}
-
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
+	
 
 	public Comcast_Customer_Details getCustomerDetails() {
 		return customerDetails;
