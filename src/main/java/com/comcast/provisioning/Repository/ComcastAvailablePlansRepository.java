@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 @Repository
-public interface ComcastAvailablePlansRepository extends CrudRepository<Comcast_Available_Plans, Long> {
+public interface ComcastAvailablePlansRepository extends JpaRepository<Comcast_Available_Plans, Long> {
 	Optional<Comcast_Available_Plans> findByPlanName(String planName);
 
 }

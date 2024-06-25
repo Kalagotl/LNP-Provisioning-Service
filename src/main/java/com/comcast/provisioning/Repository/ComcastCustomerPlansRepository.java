@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import com.comcast.provisioning.Entity.Comcast_Customer_Plans;
 
 @Repository
-public interface ComcastCustomerPlansRepository extends CrudRepository<Comcast_Customer_Plans, Long> {
+public interface ComcastCustomerPlansRepository extends JpaRepository<Comcast_Customer_Plans, Long> {
     // You can add custom query methods here if needed
 }

@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ComcastCustomerDeviceRepository extends CrudRepository<Comcast_Customer_Device, Long> {
+public interface ComcastCustomerDeviceRepository extends JpaRepository<Comcast_Customer_Device, Long> {
     // You can add custom query methods here if needed
 }

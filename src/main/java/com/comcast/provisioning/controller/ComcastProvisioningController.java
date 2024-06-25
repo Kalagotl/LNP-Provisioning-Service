@@ -47,19 +47,29 @@ public class ComcastProvisioningController {
 			}
 			if (Messages.isEmpty())
 			{
-
-
 				Comcast_Customer_Details comcast_Customer_Details =comcastCustomerDetailsMapper.mapCustomerDetails(comcastCustomerDetailsRequest);//Map the request to entity
-				Comcast_Customer_Plans customerPlans =comcastPlanMapper.map(comcastCustomerDetailsRequest);
-				customerPlans.setCustomerDetails(comcast_Customer_Details);
-				List<Comcast_Customer_Plans> comcast_Customer_Plans = new ArrayList();
-				comcast_Customer_Details.setCustomerPlans(comcast_Customer_Plans);
-				Comcast_Customer_Device customerDevice =comcastDeviceMapper.map(comcastCustomerDetailsRequest);
-				customerDevice.setCustomerDetails(comcast_Customer_Details);
-				List<Comcast_Customer_Device> comcast_Customer_Device = new ArrayList();
-			   comcast_Customer_Details.setCustomerDevices(comcast_Customer_Device);
+				
+             comcastProvisioningServiceImpl.saveCustomerDetails(comcast_Customer_Details);
+				
+             Comcast_Customer_Plans customerPlans =comcastPlanMapper.map(comcastCustomerDetailsRequest);
+				
+             Comcast_Customer_Device customerDevice =comcastDeviceMapper.map(comcastCustomerDetailsRequest);
+             comcastProvisioningServiceImpl.saveCustomerPlansAndDevice(customerPlans, customerDevice);
+             
+				
+				
+				
+				//Comcast_Customer_Details comcast_Customer_Details =comcastCustomerDetailsMapper.mapCustomerDetails(comcastCustomerDetailsRequest);//Map the request to entity
+				//Comcast_Customer_Plans customerPlans =comcastPlanMapper.map(comcastCustomerDetailsRequest);
+				//customerPlans.setCustomerDetails(comcast_Customer_Details);
+				//List<Comcast_Customer_Plans> comcast_Customer_Plans = new ArrayList();
+				//comcast_Customer_Details.setCustomerPlans(comcast_Customer_Plans);
+				//Comcast_Customer_Device customerDevice =comcastDeviceMapper.map(comcastCustomerDetailsRequest);
+				//customerDevice.setCustomerDetails(comcast_Customer_Details);
+				//List<Comcast_Customer_Device> comcast_Customer_Device = new ArrayList();
+			   //comcast_Customer_Details.setCustomerDevices(comcast_Customer_Device);
 				// Save the customer details using the service
-				comcastProvisioningServiceImpl.saveCustomerDetails(comcast_Customer_Details);
+				//comcastProvisioningServiceImpl.saveCustomerDetails(comcast_Customer_Details);
 			
 				//comcastProvisioningServiceImpl.saveCustomerPlansAndDevice(customerPlans, customerDevice);
 			}

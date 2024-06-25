@@ -1,6 +1,12 @@
 package com.comcast.provisioning.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
 import java.time.LocalDate;
-import jakarta.persistence.*;
 
 @Entity
 public class Comcast_Customer_Device {
@@ -16,7 +22,7 @@ public class Comcast_Customer_Device {
     private String status;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id",referencedColumnName = "id")
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Comcast_Customer_Details customerDetails;
 
     // Getters and setters
