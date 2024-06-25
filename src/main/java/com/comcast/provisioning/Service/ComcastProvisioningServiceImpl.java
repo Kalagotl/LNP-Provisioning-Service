@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.comcast.provisioning.Entity.Comcast_Customer_Details;
 import com.comcast.provisioning.Entity.Comcast_Customer_Device;
-import com.comcast.provisioning.Entity.Comcast_Customer_plans;
+import com.comcast.provisioning.Entity.Comcast_Customer_Plans;
 import com.comcast.provisioning.Repository.ComcastCustomerDetailsRepository;
 import com.comcast.provisioning.Repository.ComcastCustomerDeviceRepository;
 import com.comcast.provisioning.Repository.ComcastCustomerPlansRepository;
@@ -40,10 +40,12 @@ public class ComcastProvisioningServiceImpl implements ComcastProvisioningServic
 
     @Autowired
     private ComcastCustomerDeviceRepository customerDeviceRepository;
+    
 
-    public void saveCustomerPlansAndDevice(Comcast_Customer_plans customerPlans, Comcast_Customer_Device customerDevice) {
+    public void saveCustomerPlansAndDevice(Comcast_Customer_Plans customerPlans, Comcast_Customer_Device customerDevice) {
         customerPlansRepository.save(customerPlans);
         customerDeviceRepository.save(customerDevice);
     }
+
 
 }
